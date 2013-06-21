@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="25" height="14" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="smallTiles" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="tmw_desert_spacing.png" width="265" height="199"/>
+  <tile id="29">
+   <properties>
+    <property name="Buildable" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="25" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA5NjYGBQBGIlKFYGYjka4FE7Ru0YDnboALEUlTG6HbTA9LJDE4i1aIRVaRS/6HFNDzsA6AJI4HgFAAA=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="25" height="14">
+  <object name="Waypoint0" x="64" y="0"/>
+  <object name="Waypoint1" x="64" y="128"/>
+  <object name="Waypoint2" x="64" y="352"/>
+  <object name="Waypoint3" x="352" y="352"/>
+  <object name="Waypoint4" x="704" y="352"/>
+  <object name="Waypoint5" x="800" y="352"/>
+  <object name="Waypoint9" x="128" y="288"/>
+  <object name="Waypoint10" x="128" y="0"/>
+ </objectgroup>
+</map>
