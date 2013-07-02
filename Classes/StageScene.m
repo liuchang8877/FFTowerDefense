@@ -87,10 +87,10 @@
 	DataModel *m = [DataModel getModel];
 	
 	Wave *wave = nil;
-	wave = [[Wave alloc] initWithCreep:[FastRedCreep creep] SpawnRate:0.3 TotalCreeps:50];
+	wave = [[Wave alloc] initWithCreep:[FastRedCreep creep] SpawnRate:0.3 TotalCreeps:500];
 	[m._waves addObject:wave];
 	wave = nil;
-	wave = [[Wave alloc] initWithCreep:[StrongGreenCreep creep] SpawnRate:1.0 TotalCreeps:10];
+	wave = [[Wave alloc] initWithCreep:[StrongGreenCreep creep] SpawnRate:1.0 TotalCreeps:100];
 	[m._waves addObject:wave];
 	wave = nil;	
 }
@@ -179,7 +179,12 @@
 	DLog(@"Buildable: %@", type);
 	if([type isEqualToString: @"1"]) {
 		target = [MachineGunTower tower];
-		target.position = ccp((towerLoc.x *  20) + 66, self.tileMap.contentSize.height - (towerLoc.y * 20) - 66);
+		//target.position = ccp((towerLoc.x *  20) + 86, self.tileMap.contentSize.height - (towerLoc.y * 20) - 66);
+        //the speed  is the tower speed.
+        //target.speed = 15;
+        target.position = ccp((towerLoc.x *32),(10 - towerLoc.y)*32);
+        
+        DLog(@"x:%f---y:%f, x:%f,y:%f",towerLoc.x,towerLoc.y,target.position.x,target.position.y);
 		[self addChild:target z:1];
 		
 		target.tag = 1;

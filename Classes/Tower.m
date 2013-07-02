@@ -48,6 +48,8 @@
 		tower.target = nil;
         tower.speed = 0.2;
 		
+        //DLog(@"1tower.speed:%f",tower.speed);
+        
 		[tower schedule:@selector(towerLogic:) interval:tower.speed];
 		
     }
@@ -73,6 +75,8 @@
 
 -(void)towerLogic:(ccTime)dt {
 	
+    //DLog(@"2tower.speed:%f",dt);
+    
 	self.target = [self getClosestTarget];
 	
 	if (self.target != nil) {
@@ -113,7 +117,7 @@
     [self.parent addChild:self.nextProjectile z:1];
     [m._projectiles addObject:self.nextProjectile];
     
-	ccTime delta = .1;  //determines  projectile speed
+	ccTime delta = .7;  //determines  projectile speed
 	CGPoint shootVector = ccpSub(self.target.position, self.position);
 	CGPoint normalizedShootVector = ccpNormalize(shootVector);
 	CGPoint overshotVector = ccpMult(normalizedShootVector, 320);

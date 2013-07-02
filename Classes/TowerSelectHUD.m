@@ -136,7 +136,7 @@ static TowerSelectHUD *_sharedHUD = nil;
 		if (isBuildable) {
 			selSprite.opacity = 200;
 		} else {
-			selSprite.opacity = 10;		
+			selSprite.opacity = 10;
 		}
 	}
 }

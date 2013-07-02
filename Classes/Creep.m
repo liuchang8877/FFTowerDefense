@@ -83,7 +83,7 @@
  
     FastRedCreep *creep = nil;
     if ((creep = [[[super alloc] initWithFile:@"Enemy1.png"] autorelease])) {
-        creep.hp = 1;
+        creep.hp = 3;
         creep.moveDuration = 1;
 		creep.curWaypoint = 0;
         creep.inflictedDamage = 2;
@@ -103,8 +103,8 @@
     
     StrongGreenCreep *creep = nil;
     if ((creep = [[[super alloc] initWithFile:@"Enemy2.png"] autorelease])) {
-        creep.hp = 1;
-        creep.moveDuration = 9;
+        creep.hp = 5;
+        creep.moveDuration = 3;
 		creep.curWaypoint = 0;
         creep.inflictedDamage = 1;
         creep.causedDamage = NO;
